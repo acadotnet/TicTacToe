@@ -134,15 +134,11 @@ class TicTacToeBoard{
 }
 
 var squares = [];
-squares.push(new TicTac(0, 0));
-squares.push(new TicTac(0, 1));
-squares.push(new TicTac(0, 2));
-squares.push(new TicTac(1, 0));
-squares.push(new TicTac(1, 1));
-squares.push(new TicTac(1, 2));
-squares.push(new TicTac(2, 0));
-squares.push(new TicTac(2, 1));
-squares.push(new TicTac(2, 2));
+for(var x = 0; x < 3; x++){
+    for(var y = 0; y < 3; y++){
+        squares.push(new TicTac(x, y));
+    }
+}
 
 var theGame = new TicTacToeBoard(squares);
 
